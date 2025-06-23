@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial - Jq Labs</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter para todo o corpo, com fallback */
+        body {
+            font-family: "Inter", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Estilo para as seções (cards) para adicionar um efeito sutil de hover */
+        .card-section {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 8px 15px -5px rgba(0, 0, 0, 0.06);
+        }
+        /* Animação para o header */
+        @keyframes fade-in-down {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fade-in-down 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800">
+    <div class="min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
+
+        <!-- Header da Proposta - Mais dinâmico -->
+        <header class="w-full max-w-4xl bg-gradient-to-r from-blue-600 to-indigo-700 shadow-xl rounded-2xl p-8 mb-12 text-white text-center animate-fade-in-down">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-3 tracking-tight">Proposta Comercial</h1>
+            <p class="text-xl sm:text-2xl font-light opacity-90">Sistema de Gestão de Vagas e Candidatos</p>
+            <p class="text-sm mt-4 opacity-70">JQ Labs</p>
+        </header>
+
+        <!-- Nova Seção: Sumário Executivo -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Sumário Executivo</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Esta proposta apresenta nossa solução de ponta para a gestão de vagas e candidatos, projetada para <strong class="text-blue-600">otimizar os processos de RH de empresas com alto volume de admissões e múltiplos polos de atendimento</strong>. Com recursos avançados, segurança robusta e uma arquitetura escalável, nossa ferramenta visa <strong class="text-blue-600">reduzir o tempo de contratação, aumentar a eficiência e garantir a conformidade com a LGPD</strong>, transformando o gerenciamento de talentos em uma vantagem competitiva para sua organização.
+            </p>
+        </section>
+
+        <!-- Slide 1: Detalhes da Proposta -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Detalhes da Proposta</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-700">
+                <p><strong class="font-semibold text-blue-700">Proposta nº:</strong> 001/2025</p>
+                <p><strong class="font-semibold text-blue-700">Data:</strong> 23/06/2025</p>
+                <p><strong class="font-semibold text-blue-700">Cliente:</strong> AlmavivA Experience</p>
+                <p><strong class="font-semibold text-blue-700">Responsável:</strong> [Nome Responsável de RH ou TI]</p>
+                <p><strong class="font-semibold text-blue-700">Endereço:</strong> [Endereço da empresa]</p>
+                <p><strong class="font-semibold text-blue-700">Apresentado por:</strong> JQ Labs</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Apresentação da Solução -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Apresentação da Solução</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                Nossa solução de Gestão de Vagas e Candidatos é <strong class="text-blue-600">ideal para operações de RH com alto volume de admissões e múltiplos polos de atendimento</strong>, simplificando e agilizando seu fluxo de trabalho.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700">
+                A ferramenta foi construída pensando em <strong class="text-blue-600">escala, segurança e agilidade</strong>, garantindo um processo de recrutamento eficiente, moderno e totalmente adaptável às suas necessidades.
+            </p>
+        </section>
+
+        <!-- Slide 3: Recursos da Ferramenta (Foco em Benefícios Mais Explícitos) -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Benefícios e Recursos Chave</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                <li><strong class="text-blue-600">Controle granular de acesso:</strong> Gestão de usuários e permissões para segurança e conformidade.</li>
+                <li><strong class="text-blue-600">Seleção otimizada de talentos:</strong> Gestão de vagas com filtros avançados que agilizam a busca.</li>
+                <li><strong class="text-blue-600">Visão 360° do candidato:</strong> Controle e histórico completo para decisões informadas.</li>
+                <li><strong class="text-blue-600">Transparência e auditoria:</strong> Logs de todas as operações (criação, alteração, exclusão) para rastreabilidade.</li>
+                <li><strong class="text-blue-600">Máxima segurança:</strong> Sistema de autenticação segura com JWT e criptografia avançada.</li>
+                <li><strong class="text-blue-600">Insights estratégicos:</strong> Dashboard Power BI integrado para análises em tempo real.</li>
+                <li><strong class="text-blue-600">Fluxos de trabalho claros:</strong> Separação de módulos: Administrador e BackOffice.</li>
+                <li><strong class="text-blue-600">Conformidade e proteção de dados:</strong> Controle de sessões e proteção de dados conforme LGPD.</li>
+            </ul>
+        </section>
+
+        <!-- Slide 4: Escopo da Implantação (Setup Inicial) -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Escopo da Implantação (Setup Inicial)</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                <li><strong class="text-blue-600">Ambiente exclusivo:</strong> Configuração personalizada para suas necessidades.</li>
+                <li><strong class="text-blue-600">Agilidade no início:</strong> Parametrização de usuários e perfis iniciais.</li>
+                <li><strong class="text-blue-600">Capacitação completa:</strong> Treinamento remoto abrangente para sua equipe.</li>
+                <li><strong class="text-blue-600">Suporte dedicado:</strong> Acompanhamento técnico durante o onboarding.</li>
+                <li><strong class="text-blue-600">Personalização inicial:</strong> Ajustes básicos de layout.</li>
+            </ul>
+        </section>
+
+        <!-- Slide 5: Valor de Implantação -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8 text-center flex flex-col justify-center items-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 pb-3 border-blue-200 w-full max-w-sm">Investimento Inicial</h2>
+            <div class="bg-blue-100 rounded-xl p-6 mt-4 inline-block shadow-md">
+                <p class="text-5xl sm:text-6xl font-extrabold text-blue-700">R$ 12.500,00</p>
+                <p class="text-xl text-gray-600 mt-3">(Setup Único)</p>
+            </div>
+        </section>
+
+        <!-- Slide 6: Mensalidade de Licenciamento e Suporte -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Mensalidade de Licenciamento e Suporte</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                <li><strong class="text-blue-600">Alta disponibilidade:</strong> Hospedagem dedicada com performance superior.</li>
+                <li><strong class="text-blue-600">Tranquilidade dos dados:</strong> Backups diários para segurança e recuperação.</li>
+                <li><strong class="text-blue-600">Atendimento ágil:</strong> Suporte técnico em horário comercial para suas necessidades.</li>
+                <li><strong class="text-blue-600">Operação contínua:</strong> Correções de bugs e manutenção preventiva.</li>
+                <li><strong class="text-blue-600">Sempre atualizado:</strong> Atualizações de segurança e infraestrutura escalável.</li>
+            </ul>
+        </section>
+
+        <!-- Slide 7: Valor Mensal -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8 text-center flex flex-col justify-center items-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 pb-3 border-blue-200 w-full max-w-sm">Valor da Mensalidade</h2>
+            <div class="bg-blue-100 rounded-xl p-6 mt-4 inline-block shadow-md">
+                <p class="text-5xl sm:text-6xl font-extrabold text-blue-700">R$ 4.800,00</p>
+                <p class="text-xl text-gray-600 mt-3">/ mês</p>
+            </div>
+        </section>
+
+        <!-- Slide 8: Reajustes e Revisões Contratuais -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Reajustes e Condições Contratuais</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Reajuste anual pelo <strong class="text-blue-600">IPCA acumulado ou 10%</strong>, o que for maior, garantindo a atualização dos valores de forma justa e transparente.
+            </p>
+        </section>
+
+        <!-- Slide 9: Condições Comerciais -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Condições Comerciais</h2>
+            <div class="space-y-4 text-lg text-gray-700">
+                <p><strong class="font-semibold text-blue-600">Forma de pagamento:</strong> 50% na assinatura e 50% na entrega.</p>
+                <p><strong class="font-semibold text-blue-600">Vigência mínima:</strong> 12 meses, assegurando a estabilidade e o compromisso da parceria de longo prazo.</p>
+            </div>
+        </section>
+
+        <!-- Slide 10: Serviços Fora do Escopo -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Serviços Não Inclusos</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Quaisquer customizações, novos módulos, integrações ou relatórios personalizados serão <strong class="text-blue-600">orçados separadamente</strong>, mediante a necessidade e aprovação do cliente.
+            </p>
+        </section>
+
+        <!-- Nova Seção: Por Que Escolher a Jonas Quintela Tecnologia? -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center border-b-2 pb-3 border-blue-200">Por Que Escolher a JQ Labs?</h2>
+            <ul class="list-disc list-inside space-y-3 text-lg text-gray-700">
+                <li><strong class="text-blue-600">Metodologia Ágil:</strong> Nosso processo de desenvolvimento e implementação foca na agilidade e na entrega de valor contínuo.</li>
+                <li><strong class="text-blue-600">Suporte Diferenciado:</strong> Equipe dedicada pronta para atender suas necessidades e garantir o sucesso da sua operação.</li>
+                <li><strong class="text-blue-600">Foco no Cliente:</strong> Entendemos suas dores e trabalhamos para oferecer uma solução que realmente resolva seus desafios de RH.</li>
+                <li><strong class="text-blue-600">Inovação Constante:</strong> Estamos sempre atualizando nossa plataforma com as últimas tecnologias e melhores práticas do mercado.</li>
+            </ul>
+        </section>
+
+        <!-- Slide 11: Próximos Passos (Chamada para Ação Mais Direta) -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 pb-3 border-blue-200 w-full max-w-sm mx-auto">Próximos Passos</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                Estamos prontos para impulsionar a eficiência do seu RH.
+                <strong class="text-blue-600">Vamos dar o próximo passo rumo à inovação?</strong>
+            </p>
+            <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105">
+                Agendar Demonstração / Conversar
+            </a>
+            <p class="text-sm text-gray-500 mt-4">Ou enviaremos o contrato formal para assinatura, caso já estejam de acordo.</p>
+        </section>
+
+        <!-- Slide 12: Contato -->
+        <section class="card-section w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 mb-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 pb-3 border-blue-200 w-full max-w-sm mx-auto">Contato</h2>
+            <p class="text-xl sm:text-2xl font-semibold text-gray-700 mb-2">Atenciosamente,</p>
+            <p class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-4">JQ Labs</p>
+            <p class="text-lg text-gray-600">WhatsApp: (82) 98112-5843 E-mail: jqlabstec@gmail.com</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-4xl text-center text-gray-500 text-sm mt-8 opacity-80">
+            Proposta Comercial - Jonas Quintela da Silva
+        </footer>
+
+    </div>
+</body>
+</html>
