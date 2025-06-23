@@ -35,10 +35,79 @@
         .animate-fade-in-down {
             animation: fade-in-down 0.8s ease-out forwards;
         }
+        /* Estilo para ocultar o conteúdo antes da autenticação */
+        #content-wrapper {
+            display: none; /* Inicia oculto */
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800">
-    <div class="min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
+
+    <!-- Script de proteção por senha -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const correctPassword = 'Mapa#2025'; // <-- ALtere esta senha!
+            let enteredPassword = null;
+            const contentWrapper = document.getElementById('content-wrapper');
+            const passwordModal = document.getElementById('password-modal');
+            const passwordInput = document.getElementById('password-input');
+            const submitPasswordBtn = document.getElementById('submit-password-btn');
+            const errorMessage = document.getElementById('error-message');
+
+            // Função para verificar a senha
+            function checkPassword() {
+                enteredPassword = passwordInput.value;
+                if (enteredPassword === correctPassword) {
+                    passwordModal.classList.add('hidden'); // Esconde o modal
+                    contentWrapper.style.display = 'flex'; // Mostra o conteúdo da página
+                    document.body.style.overflow = 'auto'; // Reabilita o scroll
+                } else {
+                    errorMessage.classList.remove('hidden'); // Mostra a mensagem de erro
+                    passwordInput.value = ''; // Limpa o campo
+                    passwordInput.focus(); // Foca no campo para nova tentativa
+                }
+            }
+
+            // Exibe o modal de senha ao carregar a página
+            passwordModal.classList.remove('hidden');
+            passwordInput.focus(); // Foca no campo de senha
+
+            // Adiciona listener para o botão de submissão
+            submitPasswordBtn.addEventListener('click', checkPassword);
+
+            // Adiciona listener para a tecla Enter no campo de senha
+            passwordInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Previne o comportamento padrão do Enter (submeter formulário)
+                    checkPassword();
+                }
+            });
+        });
+    </script>
+
+    <!-- Modal de Senha -->
+    <div id="password-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl p-8 max-w-sm w-full text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Acesso Restrito</h3>
+            <p class="text-gray-700 mb-6">Por favor, digite a senha para acessar a proposta comercial.</p>
+            <input
+                type="password"
+                id="password-input"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 text-center text-lg"
+                placeholder="********"
+            >
+            <p id="error-message" class="text-red-600 text-sm mb-4 hidden">Senha incorreta. Tente novamente.</p>
+            <button
+                id="submit-password-btn"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg w-full transition-colors duration-200"
+            >
+                Acessar
+            </button>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal da página (inicialmente oculto) -->
+    <div id="content-wrapper" class="min-h-screen flex flex-col items-center py-10 px-4 sm:px-6 lg:px-8">
 
         <!-- Header da Proposta - Mais dinâmico -->
         <header class="w-full max-w-4xl bg-gradient-to-r from-blue-600 to-indigo-700 shadow-xl rounded-2xl p-8 mb-12 text-white text-center animate-fade-in-down">
